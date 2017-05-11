@@ -37,10 +37,10 @@ then
              'source' 'destination' 'extention'"
 
                 exit
-            else 
-                    scrD=$1     #source Directory
-                    desD=$2     #destination Directory
-                    fext=$3     #file extention
+else 
+        scrD=$1     #source Directory
+        desD=$2     #destination Directory
+        fext=$3     #file extention
 
 fi
 
@@ -62,10 +62,10 @@ fi
 if [ -d "$desD" ]   #does destination Directory esist?
 then
         echo "Destination" $desD "exist"
-            else
-                mkdir $desD     #create the directory if non-exsitant
+else
+            mkdir $desD     #create the directory if non-exsitant
 
-                   echo "Now destination directory exist"
+        echo "Now destination directory exist"
                                                             
 fi
 
@@ -81,7 +81,6 @@ echo "in" $scrD "directory"
 
 for i in $scrD/*.$fext;     #for every applicable file in the scrD
         do
-
            mv $i $desD/$(stat -c%s $i).$fext; done 
 #move choosen file to desD with size in bytes as name & still using same file ext.
 
