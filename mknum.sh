@@ -48,10 +48,10 @@ fi
 if [ -d "$scrD" ]   #does source Directory exist?
 then
         echo "Directory" $scrD "exist"
-            else
-                echo "Unable to locate source directory"
-                echo "Please try again with a valid source directory name"
-                    exit    #script ends, you'll need to try it again
+else
+            echo "Unable to locate source directory"
+            echo "Please try again with a valid source directory name"
+                exit    #script ends, you'll need to try it again
 
 
 fi
